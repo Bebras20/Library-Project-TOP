@@ -75,6 +75,7 @@ function ToggleForms(event) {
     document.getElementById('Title').value='';
     document.getElementById('Read').checked=false;
     document.getElementById('Author').value='';
+    
     if(form.style.display != 'none')
            form.style.display = 'none';
        else

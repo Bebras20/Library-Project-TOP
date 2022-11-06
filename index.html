@@ -17,7 +17,7 @@
   <div class="header"> Library </div>
     <main>
     <div class="addNewBook" > 
-        <input class="addNewBook" type="button"  value="+" onclick ="ToggleForms(event)">
+        <input class="addNewBookButton" type="button"  value="Add book" onclick ="ToggleForms(event)">
     </div>
 
     <div class="booksContainer">
@@ -26,7 +26,8 @@
 
 
 
-  <div class="hiddenForms">       
+  <div class="hiddenForms"> 
+    <div class="form_wrapper">      
     <form id="form" action="" method="post" >
     <label for="Title">Title</label>
     <input name='Title' type='text' id='Title' required/>
@@ -34,11 +35,14 @@
     <input name='Author' type='text' id='Author' required>
     <label for="Pages">Pages</label>
     <input name='Pages' type='number' id='Pages' required>
-    <label for="Read">Read</label>
+    <label class="Read" for="Read">Read</label>
     <input type="checkbox" name="Read" id="Read" checked='false' required>
     <button class='submitNewBook' type='submit'>Submit</button>
     </form>
   </div>
+  </div>
+
+
 </main>
 
 </body>
