@@ -48,8 +48,14 @@ function displayBooks() {
     bookContent.appendChild(Title);
     bookContent.appendChild(Author);
     bookContent.appendChild(Pages);
+    //
+    
+    
+    Read.style.width="100%";
+    Read.style.textAlign="center";
+    
     bookContent.appendChild(Read);
-
+    
 
     var bookContent=document.getElementById("bookContent"+`${myLibrary.length-1}`);
     
@@ -59,8 +65,20 @@ function displayBooks() {
         let counter=0;
         for (const key in myLibrary[index]) {
             items[counter].innerHTML=`${myLibrary[index][key]}`;
+            
             counter++;
         }
+        if (Read.textContent == "true"){
+            Read.textContent="Read";
+            Read.style.backgroundColor = "rgb(123, 244, 170)"
+
+        }
+        else {
+            Read.textContent="Not Read";
+            Read.style.backgroundColor = "red";
+        };
+        
+
     }
 
 }
