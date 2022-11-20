@@ -26,17 +26,21 @@
 
 
 
-  <div class="hiddenForms"> 
-    <div class="form_wrapper">      
+  <div class="hiddenForms">
+    
+    <div class="form_wrapper">
+          
     <form id="form" action="" method="post" >
-    <label for="Title">Title</label>
-    <input name='Title' type='text' id='Title' required/>
-    <label for="Author">Author</label>
-    <input name='Author' type='text' id='Author' required>
-    <label for="Pages">Pages</label>
-    <input name='Pages' type='number' id='Pages' required>
-    <label class="Read" for="Read">Read</label>
+    
+    <input name='Title' type='text' id='Title' placeholder="Title" required/>
+    
+    <input name='Author' type='text' id='Author'  placeholder="Author" required>
+    
+    <input name='Pages' type='number' id='Pages' placeholder="Pages" required>
+    <div class="status">
+    <label class="Read" for="Read">Have you read the book ?</label>
     <input type="checkbox" name="Read" id="Read" checked='false' required>
+  </div>
     <button class='submitNewBook' type='submit'>Submit</button>
     </form>
   </div>

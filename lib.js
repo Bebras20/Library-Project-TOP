@@ -70,6 +70,9 @@ function displayBooks() {
 function ToggleForms(event) {
     
     var form = document.querySelector(".hiddenForms");
+    var inputs = document.querySelectorAll("input");
+    
+    
     form.style.display = 'none';
     document.getElementById('Pages').value='';
     document.getElementById('Title').value='';
@@ -79,7 +82,20 @@ function ToggleForms(event) {
     if(form.style.display != 'none')
            form.style.display = 'none';
        else
+       {
            form.style.display = 'block';
+           form.addEventListener('mouseup', function(e) {
+            
+            for (let input of inputs) {
+                
+                if (e.target.tagName !=="INPUT" ) {
+                    
+                    form.style.display = 'none';
+                  }
+            }
+            
+          });
+        }
     
     let btn= document.querySelector('.submitNewBook');
     btn.addEventListener('click',function(event){
