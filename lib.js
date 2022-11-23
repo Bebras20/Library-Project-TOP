@@ -1,21 +1,23 @@
 
 
-function Book(title,author,pages, read){
-    this.title=title;
-    this.author=author;
-    this.pages=pages;
-    this.read= read;
-    /* You must comeback to this 
-    this.info = function(){
-        if (read){
-            return(title +" by " +author +","+pages+ " pages, has been read");
+
+class Book {
+    constructor(title,author,pages, read) {
+         this.title = title;
+         this.author = author;
+         this.pages = pages;
+         this.read = read;
+         }
+    info() { 
+        if (this.read){
+            return(this.title +" by " +this.author +","+this.pages+ " pages, has been read");
         }
         else{
-            return(title +" by " +author +","+pages+ " pages, not read yet");
+            return(this.title +" by " +this.author +","+this.pages+ " pages, not read yet");
         }
-    }
-    */
+        }
 }
+
 /* Adding first book manually */
 const firstBook = new Book("mylife","carl ekombi","265",true);
 let myLibrary = [];
@@ -23,10 +25,8 @@ myLibrary.push(firstBook);
 
 
 function addBookToLibrary(Book) {
-    
     myLibrary.push(Book);
     displayBooks();
-  
 }
 /*
 Creating and displaying books from user input 
@@ -48,7 +48,7 @@ function displayBooks() {
     bookContent.appendChild(Title);
     bookContent.appendChild(Author);
     bookContent.appendChild(Pages);
-    //
+    
     
     
     Read.style.width="100%";
